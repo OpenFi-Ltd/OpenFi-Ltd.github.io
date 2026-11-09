@@ -14,9 +14,14 @@
     </style>
 </head>
 <body>
-<script src="https://widget-mab.dev.get-zeus.com/popup.js"></script>
+<script src="https://widget-mab.dev.get-zeus.com/popup.js" defer></script>
 <script>
-    window.OpenFiMab('init', { widgetId: 'b000e8f6-edc0-4d84-b810-304bc476c8eb' });
+    (function (w, d, n) {
+        w[n] = w[n] || function () {
+            (w[n].q = w[n].q || []).push(arguments);
+        };
+    })(window, document, 'OpenFiMab');
+    OpenFiMab('init', { widgetId: 'b000e8f6-edc0-4d84-b810-304bc476c8eb' });
 </script>
 </body>
 </html>
